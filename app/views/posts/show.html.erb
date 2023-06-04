@@ -15,4 +15,21 @@
         </div>
       </div>
     </div>
+    <div class="row">
+      <div class="w-10 d-flex justify-content-between">
+        <%= link_to "Add new review", new_post_review_path(@post), class: "btn btn-light" %>
+        <%= link_to "Back to index", root_path, class: "btn btn-light" %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 justify-content-center mt-5">
+        <p><strong>Reviews</strong></p>
+        <ul class="list-group">
+          <% @post.reviews.each do |review| %>
+            <li class="list-group-item"><%= review.content %></li>
+          <% end %>
+        </ul>
+        <br>
+      </div>
+    </div>
   </div>
