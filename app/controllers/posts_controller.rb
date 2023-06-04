@@ -3,10 +3,6 @@ class PostsController < ApplicationController
     @posts = Post.all
   end
 
-  def show
-    @post = Post.find(params[:id])
-  end
-
   def new
     @post = Post.new
   end
@@ -18,6 +14,10 @@ class PostsController < ApplicationController
     else
       render :new, status: :unprocessable_entity
     end
+  end
+
+  def show
+    @post = Post.find(params[:id])
   end
 
   def edit
