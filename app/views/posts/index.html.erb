@@ -1,0 +1,21 @@
+  <div class="container">
+    <div class="row">
+      <div class="col6 my-5 d-flex justify-content-center">
+        <h1>I LOVE RAILS ❤️</h1>
+      </div>
+    </div>
+    <div class="cards">
+      <% @posts.each do | post | %>
+        <div class="card">
+          <div class="card-header">
+            <%= "Card for post - #{post.id}" %>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title"><%= post.title %></h5>
+            <p class="card-text"><%= post.content %></p>
+            <a href="#" class="btn btn-light">Go somewhere</a>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
